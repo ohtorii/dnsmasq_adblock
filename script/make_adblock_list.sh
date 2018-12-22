@@ -57,7 +57,7 @@ log_body(){
 }
 
 process(){
-  download_adlist "https://280blocker.net/files/280blocker_host.txt" ${work_dir}host_280blocker.txt
+  download_adlist "https://280blocker.net/files/280blocker_domain.txt" ${work_dir}host_280domain.txt
   local ret=$?
   if [ ! $ret -eq 0 ];then
     return 1
