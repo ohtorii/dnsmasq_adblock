@@ -79,6 +79,11 @@ Windows 10
 	$ fish --version
 	fish, version 2.7.1
 
+# 謝辞
+
+- https://280blocker.net/
+- http://pgl.yoyo.org/
+
 # 連絡先
 
 <https://ohtorii.hatenadiary.jp/> <br>
