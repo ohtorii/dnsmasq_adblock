@@ -1,6 +1,6 @@
 # Make dnsmasq ad-block list
 
-[dmsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)で利用可能な、ウェブ広告をブロックするリストファイルを生成します。
+[dmsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)で利用可能なウェブ広告をブロックするためのリストファイルを生成します。
 
 ## 生成するリストファイルの例
 	address=/100651.advision-adnw.jp/0.0.0.0
@@ -78,6 +78,11 @@ Windows 10
 
 	$ fish --version
 	fish, version 2.7.1
+
+# 謝辞
+
+- https://280blocker.net/
+- http://pgl.yoyo.org/
 
 # 連絡先
 
