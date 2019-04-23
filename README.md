@@ -16,6 +16,11 @@
 	address=/zqtk.net/0.0.0.0
 	address=/zucks.net/0.0.0.0
 
+## コマンドライン
+```bash
+make_adblock_list.sh output_filename
+```
+
 # 利用方法
 
 	$ ./make_adblock_list.sh ad-block.conf
@@ -46,7 +51,7 @@
 	[wc]
 	20 20 274 /tmp/adlist_work2583/host_static.txt
 
-## ad-block.conf の中身
+## ad-block.conf（出力ファイル） の中身
 	$ tail ad-block.conf
 	address=/zeusclicks.com/0.0.0.0
 	address=/zeus.developershed.com/0.0.0.0
