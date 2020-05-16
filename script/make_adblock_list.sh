@@ -63,7 +63,7 @@ process(){
     return 1
   fi
 
-  download_adlist "http://pgl.yoyo.org/adservers/serverlist.php?hostformat=showintro=0&mimetype=plaintext" ${work_dir}host_yoyo.txt
+  download_adlist "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=showintro=0&mimetype=plaintext" ${work_dir}host_yoyo.txt
   local ret=$?
   if [ ! $ret -eq 0 ];then
     return 1
