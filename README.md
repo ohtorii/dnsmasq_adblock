@@ -35,7 +35,7 @@ make_adblock_list.sh output_filename
 	[wc]
 	967 967 14974 /tmp/adlist_work2583/host_280domain.txt
 	===========================================
-	http://pgl.yoyo.org/adservers/serverlist.php?hostformat=showintro=0&mimetype=plaintext
+	https://pgl.yoyo.org/adservers/serverlist.php?hostformat=showintro=0&amp;mimetype=plaintext
 	===========================================
 	[head]
 	101com.com 101order.com 123found.com 123freeavatars.com 180hits.de 180searchassistant.com 207.net 247media.com 24log.com 24log.de
