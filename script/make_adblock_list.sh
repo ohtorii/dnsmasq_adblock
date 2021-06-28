@@ -2,8 +2,10 @@
 #
 # Contact.
 # http://d.hatena.ne.jp/ohtorii/
-# https://github.com/ohtorii/everything
+# https://github.com/ohtorii/
 # https://twitter.com/ohtorii
+#
+
 
 format(){
   #remove BOM,comment(#...),space tab and empty lines.
@@ -57,13 +59,15 @@ log_body(){
 }
 
 process(){
-  download_adlist "https://280blocker.net/files/280blocker_domain.txt" ${work_dir}host_280domain.txt
+  post_fix=$(date +%Y%m)
+  url="https://280blocker.net/files/280blocker_domain_"${post_fix}".txt"
+  download_adlist ${url} ${work_dir}host_280domain.txt
   local ret=$?
   if [ ! $ret -eq 0 ];then
     return 1
   fi
 
-  download_adlist "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=showintro=0&mimetype=plaintext" ${work_dir}host_yoyo.txt
+  download_adlist "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=showintro=0&amp;mimetype=plaintext" ${work_dir}host_yoyo.txt
   local ret=$?
   if [ ! $ret -eq 0 ];then
     return 1
