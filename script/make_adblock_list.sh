@@ -83,10 +83,24 @@ process(){
   fi
 
   #
-  #(memo) host_*.txt -> merged.txt -> dnsmasq_adblock_list.txt
+  #(memo) host_*.txt -> merged.txt -> final.txt -> dnsmasq_adblock_list.txt
   #
+  
   cat ${work_dir}host_*.txt | sort | uniq > ${work_dir}merged.txt
-  cat ${work_dir}merged.txt | sed -e "s/^/address=\//g" | sed -e "s/\$/\/0\.0\.0\.0/g" > ${output_list_name}
+  
+  #
+  # Apply exclude.txt -> final.txt
+  #
+  echo ${script_dir}/exclude.txt 
+  if [ -f ${script_dir}/exclude.txt ]; then
+    grep -v -x -F -f ${script_dir}/exclude.txt ${work_dir}merged.txt > ${work_dir}final.txt
+  else
+    echo Not found.
+    cp -f ${work_dir}merged.txt ${work_dir}final.txt
+  fi
+  
+  # final.txt -> ${output_list_name}
+  cat ${work_dir}final.txt | sed -e "s/^/address=\//g" | sed -e "s/\$/\/0\.0\.0\.0/g" > ${output_list_name}
 }
 
 abs_dirname() {
@@ -104,7 +118,7 @@ abs_dirname() {
 }
 
 usage(){
-  echo make_adblock_list.sh output_list_name
+  echo Usage: make_adblock_list.sh outputFileName
 }
 
 main(){
