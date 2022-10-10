@@ -73,9 +73,9 @@ process(){
     return 1
   fi
 
-  echo ${script_dir}/static_list.txt 
-  if [ -f ${script_dir}/static_list.txt ]; then
-    src=`cat ${script_dir}/static_list.txt`
+  echo ${script_dir}/include.txt 
+  if [ -f ${script_dir}/include.txt ]; then
+    src=`cat ${script_dir}/include.txt`
     format "$src" "${work_dir}host_static.txt"
     log_body "${work_dir}host_static.txt" 
   else
