@@ -72,7 +72,21 @@ make_adblock_list.sh output_filename
 	conf-file=/etc/ad-block.conf		#←さっき作ったファイルを指定する。
 	#conf-dir=/etc/dnsmasq.d
 
-# 動作環境
+# カスタマイズ
+
+以下の２ファイルにドメイン名を記述することで出力されるリストファイルをカスタマイズできます。  
+ファイルの文字コードはUTF8-NonBOMです、BOMを付けると誤動作します。
+
+## include.txt
+
+このファイルに記述したドメイン名をリストファイルへ追加します
+
+## ignore.txt
+
+このファイルに記述したドメイン名をリストファイルから除外します  
+行単位でマッチします（正規表現は利用できません）
+
+# 動作を確認した環境
 
 CentOS7
 
@@ -81,13 +95,18 @@ CentOS7
 
 Windows 10
 
-	$ fish --version
-	fish, version 2.7.1
+	$ bash --version
+	GNU bash, version 5.1.16(1)-release (x86_64-pc-msys)
+
 
 # 謝辞
 
 - https://280blocker.net/
 - http://pgl.yoyo.org/
+
+# ライセンス
+
+本スクリプトから参照している迷惑サイトリストのライセンスは、それぞれの作者に従ってください。
 
 # 連絡先
 
